@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", ready);
 function ready() {
     let activeTabIndex = 0;
     let tabList = document.querySelectorAll('.tab');
-    let tab = document.querySelector('.tab');
-    tab.addEventListener('click', function(e){
-        tabList.indexOf(e.target)
+    let tabWrap = document.querySelector('.tabs-group');
+    tabWrap.addEventListener('click', function(e){
+        console.log([...tabList].indexOf(e.target));
     })
   }
