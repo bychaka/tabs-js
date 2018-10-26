@@ -30,26 +30,41 @@ main{
 }
 
 .tab:hover{
-    color: #ccc;
+    text-decoration: underline;
 }
 
 .tab-active{
-    background-color: #1dc454;
+    background-color: #ccc;
     color: #fff;
 }
 
 .tabs-content-group{
     width: 100%;
-    border: 1px solid #ccc;
     box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
 }
 
-.content{
+.text-tab{
     box-sizing: border-box;
     padding: 10px;
     display: none;
+    border: 1px solid #ccc;
 }
 
-.content-active{
+.text-tab-active{
+    
+    top: -30px;
     display: block;
+    animation-duration: 0.5s;
+    animation-name: slidein;
 }
+
+@keyframes slidein {
+    from {
+        transform: translateY(-150px);
+    }
+    to {
+        transform: translateY(0);
+   }
+  }
